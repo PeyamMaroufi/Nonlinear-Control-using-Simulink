@@ -1,0 +1,447 @@
+Model {
+  Name			  "planemodel"
+  Version		  3.00
+  SimParamPage		  "Solver"
+  SampleTimeColors	  off
+  InvariantConstants	  off
+  WideVectorLines	  off
+  ShowLineWidths	  off
+  ShowPortDataTypes	  off
+  StartTime		  "0.0"
+  StopTime		  "10"
+  SolverMode		  "SingleTasking"
+  Solver		  "ode15s"
+  RelTol		  "1e-3"
+  AbsTol		  "1e-3"
+  Refine		  "1"
+  MaxStep		  "0.1"
+  InitialStep		  "auto"
+  FixedStep		  "auto"
+  MaxOrder		  5
+  OutputOption		  "RefineOutputTimes"
+  OutputTimes		  "[]"
+  LoadExternalInput	  off
+  ExternalInput		  "[t, u]"
+  SaveTime		  off
+  TimeSaveName		  "tout"
+  SaveState		  off
+  StateSaveName		  "xout"
+  SaveOutput		  off
+  OutputSaveName	  "yout"
+  LoadInitialState	  off
+  InitialState		  "xInitial"
+  SaveFinalState	  off
+  FinalStateName	  "xFinal"
+  SaveFormat		  "Matrix"
+  LimitMaxRows		  off
+  MaxRows		  "1000"
+  Decimation		  "1"
+  AlgebraicLoopMsg	  "warning"
+  MinStepSizeMsg	  "warning"
+  UnconnectedInputMsg	  "warning"
+  UnconnectedOutputMsg	  "warning"
+  UnconnectedLineMsg	  "warning"
+  InheritedTsInSrcMsg	  "warning"
+  IntegerOverflowMsg	  "warning"
+  UnnecessaryDatatypeConvMsg "none"
+  Int32ToFloatConvMsg	  "warning"
+  SignalLabelMismatchMsg  "none"
+  ConsistencyChecking	  "off"
+  ZeroCross		  on
+  SimulationMode	  "normal"
+  BlockDataTips		  on
+  BlockParametersDataTip  on
+  BlockAttributesDataTip  off
+  BlockPortWidthsDataTip  off
+  BlockDescriptionStringDataTip	off
+  BlockMaskParametersDataTip off
+  ToolBar		  off
+  StatusBar		  off
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  OptimizeBlockIOStorage  on
+  BufferReuse		  on
+  BooleanDataType	  off
+  RTWSystemTargetFile	  "grt.tlc"
+  RTWInlineParameters	  off
+  RTWRetainRTWFile	  off
+  RTWTemplateMakefile	  "grt_unix.tmf"
+  RTWMakeCommand	  "make_rtw"
+  RTWGenerateCodeOnly	  off
+  ExtModeMexFile	  "ext_comm"
+  ExtModeBatchMode	  off
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "oneshot"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  off
+  Created		  "Thu Jan 20 11:12:42 2000"
+  Creator		  "sven"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "sven"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Thu Jan 20 11:19:17 2000"
+  ModelVersionFormat	  "1.%<AutoIncrement:1>"
+  ConfigurationManager	  "none"
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "planemodel"
+    Location		    [65, 154, 1009, 483]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "portrait"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    ZoomFactor		    "100"
+    AutoZoom		    on
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      SubSystem
+      Name		      "\n"
+      Ports		      [1, 1, 0, 0, 0]
+      Position		      [690, 63, 735, 97]
+      ShowPortLabels	      on
+      MaskType		      "Matrix Gain"
+      MaskDescription	      "Matrix Gain."
+      MaskHelp		      "Multiplies input vector by entered matrix to pr"
+"oduce output vector (y=Au)."
+      MaskPromptString	      "Gain matrix:"
+      MaskStyleString	      "edit"
+      MaskTunableValueString  "on"
+      MaskEnableString	      "on"
+      MaskVisibilityString    "on"
+      MaskVariables	      "K=@1;"
+      MaskDisplay	      "disp('Ctheta')"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "Ctheta"
+      System {
+	Name			"\n"
+	Location		[533, 207, 787, 315]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  Inport
+	  Name			  "In1"
+	  Position		  [25, 33, 55, 47]
+	  Port			  "1"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  StateSpace
+	  Name			  "State\nSpace"
+	  Position		  [80, 23, 145, 57]
+	  A			  "[]"
+	  B			  "[]"
+	  C			  "[]"
+	  D			  "K"
+	  X0			  "0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Out1"
+	  Position		  [170, 33, 200, 47]
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Line {
+	  SrcBlock		  "In1"
+	  SrcPort		  1
+	  DstBlock		  "State\nSpace"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "State\nSpace"
+	  SrcPort		  1
+	  DstBlock		  "Out1"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      Clock
+      Name		      "Clock"
+      Position		      [705, 255, 725, 275]
+      DisplayTime	      off
+      Decimation	      "10"
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "Kf"
+      Position		      [430, 60, 465, 90]
+      ShowName		      off
+      Gain		      "Kf"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum"
+      Ports		      [2, 1, 0, 0, 0]
+      Position		      [505, 70, 525, 90]
+      ShowName		      off
+      IconShape		      "rectangular"
+      Inputs		      "+-"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum2"
+      Ports		      [2, 1, 0, 0, 0]
+      Position		      [190, 65, 210, 85]
+      ShowName		      off
+      IconShape		      "rectangular"
+      Inputs		      "+-"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      StateSpace
+      Name		      "controller"
+      Position		      [560, 141, 605, 179]
+      Orientation	      "left"
+      ShowName		      off
+      A			      "[]"
+      B			      "[]"
+      C			      "[]"
+      D			      "K"
+      X0		      "0"
+      MaskType		      "Matrix gain"
+      MaskDescription	      "Matrix Gain:"
+      MaskHelp		      "Multiplies input vector by entered matrix to pr"
+"oduce output vector."
+      MaskPromptString	      "Gain matrix:"
+      MaskStyleString	      "edit"
+      MaskTunableValueString  "on"
+      MaskEnableString	      "on"
+      MaskVisibilityString    "on"
+      MaskInitialization      "K = @1;"
+      MaskDisplay	      "disp('L')"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "L"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "pilot 1"
+      Ports		      [1, 1, 0, 0, 0]
+      Position		      [250, 48, 290, 102]
+      SourceBlock	      "pilotlib/Pilot 1"
+      SourceType	      "SubSystem"
+    }
+    Block {
+      BlockType		      ToWorkspace
+      Name		      "pitch angle"
+      Position		      [810, 72, 860, 88]
+      VariableName	      "theta"
+      Buffer		      "10000"
+      Decimation	      "1"
+      SampleTime	      "0"
+      SaveFormat	      "Matrix"
+    }
+    Block {
+      BlockType		      StateSpace
+      Name		      "plane\ndynamics"
+      Position		      [550, 61, 615, 99]
+      A			      "A"
+      B			      "B"
+      C			      "C"
+      D			      "D"
+      X0		      "0"
+    }
+    Block {
+      BlockType		      TransferFcn
+      Name		      "prefilter"
+      Position		      [335, 57, 375, 93]
+      Numerator		      "[1]"
+      Denominator	      "[T_f 1]"
+    }
+    Block {
+      BlockType		      Step
+      Name		      "reference"
+      Position		      [100, 60, 120, 80]
+      Time		      "0"
+      Before		      "0"
+      After		      "1"
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      ToWorkspace
+      Name		      "states"
+      Position		      [680, 152, 730, 168]
+      VariableName	      "x"
+      Buffer		      "10000"
+      Decimation	      "1"
+      SampleTime	      "0"
+      SaveFormat	      "Matrix"
+    }
+    Block {
+      BlockType		      ToWorkspace
+      Name		      "time"
+      Position		      [805, 257, 855, 273]
+      VariableName	      "t"
+      Buffer		      "10000"
+      Decimation	      "1"
+      SampleTime	      "0"
+      SaveFormat	      "Matrix"
+    }
+    Block {
+      BlockType		      ToWorkspace
+      Name		      "upilot"
+      Position		      [325, 137, 375, 153]
+      VariableName	      "command"
+      Buffer		      "10000"
+      Decimation	      "1"
+      SampleTime	      "0"
+      SaveFormat	      "Matrix"
+    }
+    Line {
+      SrcBlock		      "\n"
+      SrcPort		      1
+      Points		      [30, 0]
+      Branch {
+	Points			[0, 150; -620, 0; 0, -150]
+	DstBlock		"Sum2"
+	DstPort			2
+      }
+      Branch {
+	DstBlock		"pitch angle"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Sum2"
+      SrcPort		      1
+      DstBlock		      "pilot 1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "reference"
+      SrcPort		      1
+      DstBlock		      "Sum2"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "plane\ndynamics"
+      SrcPort		      1
+      Points		      [25, 0]
+      Branch {
+	DstBlock		"\n"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 80]
+	Branch {
+	  DstBlock		  "controller"
+	  DstPort		  1
+	}
+	Branch {
+	  DstBlock		  "states"
+	  DstPort		  1
+	}
+      }
+    }
+    Line {
+      SrcBlock		      "prefilter"
+      SrcPort		      1
+      DstBlock		      "Kf"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Sum"
+      SrcPort		      1
+      DstBlock		      "plane\ndynamics"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "controller"
+      SrcPort		      1
+      Points		      [-75, 0; 0, -75]
+      DstBlock		      "Sum"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Kf"
+      SrcPort		      1
+      DstBlock		      "Sum"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "pilot 1"
+      SrcPort		      1
+      Points		      [10, 0]
+      Branch {
+	DstBlock		"prefilter"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 70]
+	DstBlock		"upilot"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Clock"
+      SrcPort		      1
+      DstBlock		      "time"
+      DstPort		      1
+    }
+  }
+}
